@@ -14,14 +14,25 @@ module.exports = {
     'react',
     'react-hooks',
     'react-refresh'
+
   ],
   rules: {
+    //React
     'react-refresh/only-export-components': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/prop-types': 0,
     'react/display-name': 0,
 
+    //Mui
+    'no-restricted-imports': [
+      'error',
+      {
+        'patterns': ['@mui/*/*/*']
+      }
+    ],
+
+    //Comon
     'no-console': 1,
     'no-lonely-if': 1,
     'no-unused-vars': 1,
@@ -41,4 +52,6 @@ module.exports = {
     'comma-spacing': 1,
     'arrow-spacing': 1
   }
-}           
+}
+
+
