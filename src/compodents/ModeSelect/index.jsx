@@ -9,6 +9,7 @@ import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness'
 import {
   useColorScheme
 } from '@mui/material/styles'
+import { AddBoxRounded } from '@mui/icons-material'
 
 
 function ModeSelect() {
@@ -22,8 +23,8 @@ function ModeSelect() {
   }
 
   return (
-    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-      <InputLabel id="lable-selcet-dark-light-mode">Age</InputLabel>
+    <FormControl size="small">
+      <InputLabel id="lable-selcet-dark-light-mode">Mode</InputLabel>
       <Select
         labelId="lable-selcet-dark-light-mode"
         id="demo-select-small"
@@ -33,10 +34,10 @@ function ModeSelect() {
       >
 
         <MenuItem value='light'>
-          <div style={{ display:'flex', alignItems:'center', gap:'8px' }}>
+          <Box sx={{ display:'flex', alignItems:'center', gap:'8px' }}>
             <LightModeIcon fontSize='small'/>
           Light
-          </div>
+          </Box>
 
         </MenuItem>
         <MenuItem value='dark' >
@@ -47,7 +48,7 @@ function ModeSelect() {
 
         </MenuItem>
         <MenuItem value='system'>
-          <Box sx={{ display:'flex', alignItems:'center', gap:2 }}>
+          <Box sx={{ display:'flex', alignItems:'center', gap:1 }}>
             <SettingsBrightnessIcon fontSize='small'/>
           System
           </Box>
